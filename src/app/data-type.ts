@@ -46,5 +46,5 @@ export interface signUp {
     contact:string,
     totalPrice:number,
     userId:string,
-    id:number|undefined
+    id?:number
   }
