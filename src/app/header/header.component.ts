@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit {
   searchResult:undefined|product[];
   cartItems=0;
   constructor(private route: Router, private product:ProductService) {}
+  isNavOpen: boolean;
+  isOpenSearch: boolean;
 
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
@@ -76,5 +78,13 @@ export class HeaderComponent implements OnInit {
   submitSearch(val:string){
     console.warn(val)
   this.route.navigate([`search/${val}`]);
+  }
+  toggleMobNav(){
+    this.isNavOpen = !this.isNavOpen;
+    this.isOpenSearch = false;
+  }
+  openSearch(){
+    this.isOpenSearch = !this.isOpenSearch;
+    this.isNavOpen = false;
   }
 }
