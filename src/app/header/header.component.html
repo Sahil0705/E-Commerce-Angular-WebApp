@@ -3,8 +3,8 @@
     <a routerLink="" class="logo">Quick Store</a>
     <div class="right-nav">
     <ng-container [ngSwitch]="menuType">
-        <ul *ngSwitchCase="'user'" class="nav-links">
-            <i class="uil uil-times navCloseBtn" (click)="toggleMobNav()"></i>
+        <ul *ngSwitchCase="'user'" class="nav-links" (click)="toggleMobNav()">
+            <i class="uil uil-times navCloseBtn"></i>
             <li><a routerLink="seller-auth">Seller</a></li>
             <li><a routerLink="">Home</a></li>
             <li><a>{{userName | titlecase}}</a></li>
@@ -12,18 +12,18 @@
             <li><a (click)="userLogout()">Logout</a></li>
             <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li>
           </ul>
-          <ul *ngSwitchCase="'seller'" class="nav-links">
-            <i class="uil uil-times navCloseBtn" (click)="toggleMobNav()"></i>
+          <ul *ngSwitchCase="'seller'" class="nav-links" (click)="toggleMobNav()">
+            <i class="uil uil-times navCloseBtn" ></i>
             <li><a routerLink="seller-add-product">Add Product</a></li>
             <li><a routerLink="seller-home">List</a></li>
             <li><a (click)="logout()">Logout</a></li>
             <li><a href="#">{{sellerName | titlecase}}</a></li>
             </ul>
-        <ul *ngSwitchDefault class="nav-links">
-            <i class="uil uil-times navCloseBtn" (click)="toggleMobNav()"></i>
+        <ul *ngSwitchDefault class="nav-links" (click)="toggleMobNav()">
+            <i class="uil uil-times navCloseBtn" ></i>
             <li><a routerLink="seller-auth">Seller</a></li>
             <li><a routerLink="">Home</a></li>
-            <li><a routerLink="user-auth">Login/Sign-up</a></li>
+            <li><a routerLink="user-auth">User</a></li>
             <li><a href="#">Cart({{cartItems}})</a></li>
             </ul>
     </ng-container>

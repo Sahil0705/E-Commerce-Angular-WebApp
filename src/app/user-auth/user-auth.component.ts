@@ -11,6 +11,7 @@ import { UserService } from '../services/user.service';
 export class UserAuthComponent implements OnInit {
   showLogin:boolean=true
   authError:string="";
+  isLogin: boolean;
   constructor(private user: UserService, private product:ProductService) {}
 
   ngOnInit(): void {
@@ -18,6 +19,7 @@ export class UserAuthComponent implements OnInit {
   }
 
   signUp(data: signUp) {
+    console.log(data);
     this.user.userSignUp(data);
   }
   login(data: login) {

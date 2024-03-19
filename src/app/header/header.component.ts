@@ -48,7 +48,8 @@ export class HeaderComponent implements OnInit {
   }
   logout(){
     localStorage.removeItem('seller');
-    this.route.navigate(['/'])
+    this.isNavOpen = false;
+    this.route.navigate(['/']);
   }
 
   userLogout(){

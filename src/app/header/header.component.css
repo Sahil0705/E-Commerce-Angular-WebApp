@@ -89,6 +89,7 @@ a {
   padding: 0 15px 0 45px;
   font-size: medium;
   font-weight: 800;
+  box-shadow: 2px 3px #bbb;
 }
 
 .nav .navOpenBtn,
@@ -186,6 +187,6 @@ a {
     max-width: calc(100% - 20px);
     right: 50%;
     transform: translateX(50%);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
   }
 }

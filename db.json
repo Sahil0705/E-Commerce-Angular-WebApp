@@ -78,6 +78,18 @@
       "email": "abc@gmail.com",
       "password": "123",
       "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "1",
+      "email": "2",
+      "password": "3",
+      "id": 3
     }
   ],
   "cart": [
