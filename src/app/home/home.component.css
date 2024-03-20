@@ -5,7 +5,11 @@
 .product-header-image{
     object-fit: contain;
     width: 100%;
-    height: 600px;
+    height: 530px;
+    margin-top: 85px 
+}
+.carousel-caption{
+    background: none;
 }
 .product-item{
     margin-bottom: 40px;
@@ -80,4 +84,9 @@
 }
 .product-footer .removeProd:hover{
     background-color: green !important;
+}
+@media screen and (max-width: 450px){
+    .product-header-image{
+        height: 350px;
+    }
 }

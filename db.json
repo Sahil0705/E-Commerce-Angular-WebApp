@@ -1,4 +1,15 @@
 {
+  "banners": [
+    {
+      "image": "https://img.freepik.com/free-vector/big-sale-all-items-3d-background_23-2148400047.jpg?t=st=1710907279~exp=1710910879~hmac=392b1460befc43b2fc25d97ad4e7057f170823d01fdfc9722b53a3a37c487200&w=996"
+    },
+    {
+      "image": "https://cdn.dribbble.com/userupload/3582900/file/original-326f7e32814d84ab026cc84e7a7ea35b.jpg?resize=1504x1051"
+    },
+    {
+      "image": "https://nypost.com/wp-content/uploads/sites/2/2023/10/10_31-Blk-Fri-2023.jpg?quality=75&strip=all&w=1200"
+    }
+  ],
   "seller": [
     {
       "name": "abc",
@@ -13,26 +24,26 @@
       "price": "550",
       "category": "mobile",
       "color": "white",
-      "description": "this is a Samsung product",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "description": "Samsung Galaxy S2",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/in/2302/gallery/in-galaxy-s23-s918-sm-s918bzgcins-534863400?$650_519_PNG$",
       "id": 1
     },
     {
-      "name": "I phone 14",
+      "name": "Iphone 14",
       "price": "100000",
       "category": "mobile",
       "color": "black",
       "description": "An Apple Product",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "image": "https://cellbuddy.in/buddy/wp-content/uploads/2022/09/8-gold-2.png",
       "id": 2
     },
     {
-      "name": "HP Laptop",
+      "name": "Dell Laptop",
       "price": "50000",
       "category": "Laptop",
       "color": "black",
-      "description": "Hp laptop for student and professionals",
-      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "description": "Dell laptop for student and professionals",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAVypt7wkN794Y5EokoZ7U9tHuZDOyUvq8Bg",
       "id": 3
     },
     {
@@ -41,7 +52,7 @@
       "category": "Shoes",
       "color": "Black",
       "description": "Best shoes for Running",
-      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
+      "image": "https://m.media-amazon.com/images/I/41Typ0O3EHL._AC_UY300_.jpg",
       "id": 4
     },
     {
@@ -128,6 +139,18 @@
       "productId": 2,
       "userId": 5,
       "id": 9
+    },
+    {
+      "name": "Dell Laptop",
+      "price": "50000",
+      "category": "Laptop",
+      "color": "black",
+      "description": "Dell laptop for student and professionals",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAVypt7wkN794Y5EokoZ7U9tHuZDOyUvq8Bg",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 10
     }
   ],
   "orders": []
