@@ -18,8 +18,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 6px 45px;
-  background: #4a98f7;
+  padding: 9px 45px;
+  background: #4070f4;
   z-index: 100;
   box-shadow: 0px 1px 10px #999;
 }
@@ -124,7 +124,18 @@ a {
   justify-content: space-evenly;
   gap: 30px;
 }
-
+.right-nav li:after{
+  content: '';
+  margin: auto;
+  display: block;
+  height: 2px;
+  width: 0%;
+  transition: all 0.5s ease;
+}
+.right-nav li:hover:after{
+  width: 100%;
+  background-color: white;
+}
 /* responsive */
 @media screen and (max-width: 1160px) {
   .nav {

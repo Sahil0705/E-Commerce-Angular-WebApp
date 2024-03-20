@@ -18,6 +18,7 @@ export interface signUp {
     id:number,
     quantity:undefined | number,
     productId:undefined|number
+    isInCart?: boolean;
   }
   export interface cart{
     name:string,

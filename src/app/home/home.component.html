@@ -20,15 +20,15 @@
                 <div class="product-details">
                     <h6 class="name-head">{{item.name}}</h6>
                     <div class="product-price">
-                        <h6>Price:{{item.price}}</h6>
+                        <h6>Price:&nbsp;&#8377;{{item.price}}</h6>
                     </div>
                     <div class="product-color">
-                        <h6>Color:{{item.color}}</h6>
+                        <h6>Color: <div [style.backgroundColor]="item.color"></div></h6>
                     </div>
                 </div>
                 <div class="product-footer">
                     <a routerLink="/details/{{item.id}}">View Details</a>
-                    <a href="">Add to Cart</a>
+                    <a class="addCart" (click)="!item.isInCart ? addToCart(item.id) : removeFromCart(item.id)" [ngClass]="{'removeProd': item.isInCart}">{{!item.isInCart ? "Add to Cart" : "Remove from Cart"}}</a>
 
                 </div>
             </div>
