@@ -26,8 +26,10 @@ export class HomeComponent implements OnInit {
   updateTrendyProd(trendyProducts): product[]{
     this.product.currentCart().subscribe(data=>{
       if(data){
+        console.log(data);
         trendyProducts.forEach((prod: product) => {
-          const index = data.findIndex(item => item.id == prod.id);
+          const index = data.findIndex((item:product) => (item.productId == prod.id) || (item.id == prod.id));
+          console.log(prod, index);
           prod.isInCart = index!=-1;
         })
       }

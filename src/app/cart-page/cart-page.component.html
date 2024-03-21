@@ -1,42 +1,57 @@
-<div class="cart-page">
-    <h1>
-        Cart Page
-    </h1>
-    <div class="row">
-        <div class="col-sm-8 details">
-            <ul *ngFor="let cart of cartData">
-                <li>
-                    <img src="{{cart.image}}" alt="">
-                </li>
-                <li>
-                    <span> {{cart.name}}</span>
-                </li>
-                <li>
-                    <span> Price : {{cart.price}}</span>
-                </li>
-                <li>
-                    <span> Quantity : {{cart.quantity}}</span>
-                </li>
-                <li>
-                    <button class="form-button" (click)="removeToCart(cart.id)">Remove To Cart</button>
-                </li>
-            </ul>
+<div class="shopping-cart" *ngIf="cartData">
 
-        </div>
-        <div class="col-sm-4 summary">
-            <h3>Summary</h3>
-            <ul>
-                <li> <span>Amount:</span><span>{{priceSummary.price}}</span></li>
-                <li> <span>Tax:</span><span>{{priceSummary.tax}}</span></li>
-                <li> <span>Delivery:</span><span>{{priceSummary.delivery}}</span></li>
-                <li> <span>Discount:</span><span>{{priceSummary.discount}}</span></li>
-                <li> <span>
-                        <h4>Total</h4>
-                    </span> <span>
-                        <h4>{{priceSummary.total}}</h4>
-                    </span></li>
-                <button (click)="checkout()" class="form-button max-width">Checkout</button>
-            </ul>
-        </div>
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Delete</label>
+    <label class="product-line-price">Total</label>
+  </div>
+  
+  <hr/>
+
+  <div class="product" *ngFor="let cart of cartData">
+    <div class="product-image">
+      <img [src]="cart.image">
     </div>
+    <div class="product-details">
+      <div class="product-title">{{cart.name}}</div>
+      <p class="product-description">{{cart.description}}</p>
+    </div>
+    <div class="product-price">{{cart.price}}</div>
+    <div class="product-quantity">{{cart.quantity}}</div>
+    <div class="product-removal">
+      <button class="remove-product">
+        <i class="fas fa-trash" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="product-line-price">{{cart.price * cart.quantity}}</div>
+  </div>
 </div>
+
+<div class="totals">
+  
+    <label>Subtotal:</label>
+    <div class="totals-value" id="cart-subtotal">{{priceSummary.price}}</div>
+  
+  
+    <label>Tax (10%):</label>
+    <div class="totals-value" id="cart-tax">{{priceSummary.tax}}</div>
+  
+  
+    <label>Shipping:</label>
+    <div class="totals-value" id="cart-shipping">{{priceSummary.delivery}}</div>
+  
+  
+    <label>Discount:</label>
+    <div class="totals-value" id="cart-shipping">{{priceSummary.discount}}</div>
+  
+  
+    <label>Grand Total:</label>
+    <div class="totals-value total-amount" id="cart-total">{{priceSummary.total}}</div>
+  
+    <button (click)="checkout()" class="checkout" ><i class="fas fa-money-check"></i> Checkout</button>
+
+</div>
+    

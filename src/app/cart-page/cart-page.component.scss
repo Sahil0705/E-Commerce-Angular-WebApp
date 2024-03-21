@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tilt+Neon&display=swap');
+
+/* Global settings */
+$color-border: #eee;
+$color-label: #aaa;
+$font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+
+
+/* Global "table" column settings */
+.product-image { float: left; width: 20%; text-align: center;}
+.product-details { float: left; width: 37%; text-align: center;}
+.product-price { float: left; width: 12%; text-align: center; font-family: "Tilt Neon", sans-serif;}
+.product-quantity { float: left; width: 10%; text-align: center; }
+.product-removal { float: left; width: 9%; text-align: center;}
+.product-line-price { float: left; width: 12%; text-align: right; text-align: center; font-family: "Tilt Neon", sans-serif;}
+
+.product{
+  border-bottom: 1px solid #e2e2e2;
+}
+/* This is used as the traditional .clearfix class */
+.group:before,
+.group:after {
+    content: '';
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1;
+}
+
+
+/* Apply clearfix in a few places */
+.shopping-cart, .column-labels, .product {
+  @extend .group;
+}
+
+
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before {
+  content: '₹';
+}
+
+
+/* Body/Header stuff */
+body {
+  padding: 0px 30px 30px 20px;
+  font-family: ₹font-default;
+  font-weight: 100;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+label {
+  color: ₹color-label;
+}
+
+.shopping-cart {
+    background-color: white;
+    width: 90%;
+    margin: 50px auto;
+    padding: 2rem;
+    box-shadow: 0 0 34px #AAA;
+    border-radius: 34px;
+}
+
+
+/* Column headers */
+.column-labels {
+  label {
+    padding-bottom: 5px;
+    border-bottom: 1px solid ₹color-border;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Tilt Neon", sans-serif;
+  }
+  
+
+}
+
+
+/* Product entries */
+.product {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid ₹color-border;
+  
+  .product-image {
+    text-align: center;
+    img {
+      width: 100px;
+    }
+  }
+  
+  .product-details {
+    font-size: 18px;
+    font-family: "Tilt Neon", sans-serif;
+    .product-title {
+      margin-right: 20px;
+    }
+    .product-description {
+      margin: 5px 5px 5px 5px;
+      line-height: 1.4em;
+    }
+  }
+  
+  .product-quantity {
+    font-family: "Tilt Neon", sans-serif;
+    input {
+      width: 40px;
+      
+    }
+  }
+  
+  .remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: white;
+    color: red;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .remove-product:hover {
+    transform: scale(1.1);
+    font-weight: bolder;
+  }
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 25px;
+  width: 80%;
+  margin: auto;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  grid-column: 1 / span 2;
+  transition: 1s ease-in-out;
+  box-shadow: 0 0 15px #aaa;
+}
+
+.checkout:hover {
+  background-color: #104ffc;
+  transform: scale(1.07);
+}
+.totals-value::before{
+  content: '₹';
+}
+.total-amount{
+  font-size: larger;
+  text-decoration: underline;
+  text-shadow: 0px 0 5px yellow;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  
+  .shopping-cart {
+    padding-top: 20px;
+    border-top: 1px solid ₹color-border;
+    padding: 0.5rem;
+  }
+  
+  .column-labels {
+    display: none;
+  }
+  
+  .product-image {
+    float: right;
+    width: 50%;
+    img {
+      margin: 0;
+    }
+  }
+  
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  
+  .product-price {
+    clear: both;
+    width: 25%;
+  }
+  
+  .product-quantity {
+    input {
+      margin-left: 20px;
+    }
+  }
+  
+  .product-quantity:before {
+    content: 'x';
+  }
+  
+  .product-removal {
+    width: auto;
+  }
+  
+  .product-line-price {
+    float: right;
+    width: 50%;
+  }
+  
+  .product .remove-product{
+    position: relative;
+    top: -6px;
+    width: 1%;
+  }
+  .checkout{
+    width: 90%;
+  }
+}
+
+.totals{
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 24%;
+  gap: 1rem;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 40px #aaa;
+}
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  
+  .product-removal {
+    float: right;
+  }
+  
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+  
+  .product .product-line-price:before {
+    content: 'Item Total: ₹';
+  }
+}
+@media (max-width: 450px) {
+  .totals{
+    width: 85%;
+  }
+}

@@ -4,7 +4,8 @@ body {
   .container {
     margin: auto;
     background-color: #eaeef6;
-    max-width: 1405px;
+    max-width: 100%;
+    padding: 25px;
   }
   .common-form {
     flex-direction: column;
@@ -53,4 +54,10 @@ body {
   }
   .max-width{
     width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    .container {
+      padding: 25px 5px;
+    }
   }
