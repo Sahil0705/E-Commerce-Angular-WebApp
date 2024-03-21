@@ -32,7 +32,7 @@
         <div class="search-box">
           <i class="uil uil-search search-icon" (click)="submitSearch(searchInput.value)"></i>
           <input type="text" #searchInput (keyup)="searchProduct($event)"
-          placeholder="Search Products" />
+          placeholder="Search Products" (blur)="hideSearch()" />
           <ul class="suggested-search" *ngIf="searchInput.value">
             <li *ngFor="let item of searchResult">
                 <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
