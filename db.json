@@ -105,29 +105,17 @@
   ],
   "cart": [
     {
-      "name": "Dell Laptop",
-      "price": "50000",
-      "category": "Laptop",
+      "name": "Iphone 14",
+      "price": "100000",
+      "category": "mobile",
       "color": "black",
-      "description": "Dell laptop for student and professionals",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAVypt7wkN794Y5EokoZ7U9tHuZDOyUvq8Bg",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "name": "Nike Shoes",
-      "price": "3000",
-      "category": "Shoes",
-      "color": "Black",
-      "description": "Best shoes for Running",
-      "image": "https://m.media-amazon.com/images/I/41Typ0O3EHL._AC_UY300_.jpg",
+      "description": "An Apple Product",
+      "image": "https://cellbuddy.in/buddy/wp-content/uploads/2022/09/8-gold-2.png",
       "isInCart": false,
       "quantity": 1,
-      "productId": 4,
+      "productId": 2,
       "userId": 1,
-      "id": 11
+      "id": 1
     }
   ],
   "orders": []

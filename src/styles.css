@@ -1,9 +1,10 @@
+
 body {
     font-family: sans-serif;
+    background-color: #eaeef6;
   }
   .container {
     margin: auto;
-    background-color: #eaeef6;
     max-width: 100%;
     padding: 25px;
   }
